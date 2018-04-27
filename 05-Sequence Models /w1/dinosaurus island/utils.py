@@ -94,6 +94,7 @@ def rnn_forward(X, Y, a0, parameters, vocab_size = 27):
         
         # Update the loss by substracting the cross-entropy term of this time-step from it.
         loss -= np.log(y_hat[t][Y[t],0])
+        print(y_hat[t][Y[t],0])
         
     cache = (y_hat, a, x)
         
